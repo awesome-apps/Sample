@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<noscript>This site needs javascript!</noscript>
+<body background="https://sites.google.com/site/scideastech/home/Background-5.png"/>
+<script>
+var isEditor;
+//  Home Page
+function signInAsViewer(){
+  isEditor = false;
+  confirm("Note: You can only view the contents of this blog and cannot tamper with any of it. Are you okay with these guidelines?");   
+  document.getElementById("homeDIV").style.display("none");
+}
+function signInAsEditor(){
+    var password = prompt("PASSWORD");
+    if(password == "venkata1"){
+        isEditor = true;
+    }
+    else{
+        signInAsEditor();
+        document.getElementById("homeDIV").style.display("none");
+    }
+}
+</script>
+<! All Main Code Here>
+<div id="homeDIV" class="homePage">
+<img src="https://sites.google.com/site/scideastech/home/BlogTitle.png" align="middle"/>
+<input type="image" src="https://sites.google.com/site/scideastech/home/ViewerOption.png" onclick="signInAsViewer();" align="middle" width="150" height="50"style="display:block; margin:auto;"><br/>
+<input type="image" src="https://sites.google.com/site/scideastech/home/EditorButton.png" onclick="signInAsEditor();" align="middle" width="150" height="50" style="display:block; margin:auto;">
+</div>
+
+
+
